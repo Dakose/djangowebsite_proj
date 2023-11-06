@@ -1,0 +1,117 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="{% static './css/helper.css' %}" rel="stylesheet">
+    <link href="{% static './css/style.css' %}" rel="stylesheet">
+
+    <title>Decbase</title>
+</head>
+
+<body id="main">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="">
+                <img src="{% static './img/logo.png' %}" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav font-600 font-up font-sm">
+                    <a class="nav-link active" href="#main">Home</a>
+                    <a class="nav-link" href="#services">Services</a>
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#project">Project</a>
+                    <a class="nav-link" href="#blog">Blog</a>
+                    <a class="nav-link" href="#contact">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+{% block index %}
+
+{% endblock %}
+
+<footer class="container-fluid py-5 bg-grey">
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-12 col-md">-->
+<!--                    <img class="logo mb-3" src="{% static 'img/logo.png' %}" alt="">-->
+<!--                    <p class="footer-text">-->
+<!--                        But i must explain to you all this mistaken idea of dencouncing pleasure.-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--                <div class="col-6 col-md">-->
+<!--                    <h6 class="footer-title">Quick Links</h6>-->
+<!--                    <ul class="list-unstyled">-->
+<!--                        <li class="my-1"><a class="footer-link" href="">About Our Company</a></li>-->
+<!--                        <li class="my-1"><a class="footer-link" href="">Services we provide</a></li>-->
+<!--                        <li class="my-1"><a class="footer-link" href="">Career & Opportunity</a></li>-->
+<!--                        <li class="my-1"><a class="footer-link" href="">Privacy & policy</a></li>-->
+<!--                        <li class="my-1"><a class="footer-link" href="">Contact us</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--                <div class="col-6 col-md">-->
+<!--                    <h6 class="footer-title">Company</h6>-->
+<!--                    <ul class="list-unstyled">-->
+<!--                        <li class="my-1"><a class="footer-link" href="">About Company</a></li>-->
+<!--                        <li class="my-1"><a class="footer-link" href="">Our Testimonials</a></li>-->
+<!--                        <li class="my-1"><a class="footer-link" href="">Latest News</a></li>-->
+<!--                        <li class="my-1"><a class="footer-link" href="">Our misson</a></li>-->
+<!--                        <li class="my-1"><a class="footer-link" href="">Get a free Quot</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--                <div class="col-6 col-md">-->
+<!--                    <h6 class="footer-title">Contact us</h6>-->
+<!--                    <p class="footer-text">-->
+<!--                        Sagrada Familia, Herba Street Front USA brandoxide@gmail.com 002-568423591-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--                <div class="col-6 col-md">-->
+<!--                    <h6 class="footer-title">Follow us</h6>-->
+<!--                    <ul class="list-unstyled footer-socials">-->
+<!--                        <li><a href=""><i class="fa fa-facebook"></i></a></li>-->
+<!--                        <li class="active"><a href=""><i class="fa fa-twitter"></i></a></li>-->
+<!--                        <li><a href=""><i class="fa fa-instagram"></i></a></li>-->
+<!--                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+        <div class="copyright footer-text text-center">
+            <hr> petproject @ 2023 Dakose.
+        </div>
+    </footer>
+
+
+    <script src=" https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+            integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
+
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{% static './js/script.js' %}"></script>
+</body>
+
+</html>
