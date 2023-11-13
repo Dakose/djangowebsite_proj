@@ -5,7 +5,7 @@ from .models import NewsSlider
 # Register your models here.
 
 class NewsAdmin(admin.ModelAdmin):
-    list_display = ('news_title','news_text', 'news_css', 'get_image')
+    list_display = ('news_title', 'news_text', 'news_css', 'get_image')
     list_display_links = ('news_title', )
     list_editable = ('news_css', )
     fields = ('news_title', 'news_text', 'news_css', 'news_img', 'get_image')

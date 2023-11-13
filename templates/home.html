@@ -337,6 +337,7 @@
         </section>
 
         <section id="contact" class="container my-8">
+            {% csrf_token %}
             <div class="row">
                 <div class="col-md-8 offset-md-2">
                     <div class="text-center">
@@ -346,14 +347,17 @@
                             releases with our newsletter.</p>
                         <div class="input-group subscribe">
                             <div>
-                                <input type="text" class="user_name" placeholder="Enter your name.....">
+                                <label for="inputEmail" class="user_name"></label>
+                                {{ form.name }}
                             </div>
                             <div>
-                                <input type="text" class="user_phone" placeholder="Enter your phone, with '+...'.....">
+                                <label for="inputPhone" class="user_phone"></label>
+                                {{ form.phone }}
                             </div>
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" >Sign Up</button>
+                                <button class="btn btn-outline-secondary" type="submit" ></button>
                             </div>
+                        </form>
                         </div>
                     </div>
                 </div>

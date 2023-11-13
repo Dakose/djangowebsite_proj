@@ -8,9 +8,10 @@ class NewsSlider(models.Model):
     news_css = models.CharField(max_length=200, null=True, default='-', verbose_name='CSS class')
 
     def __str__(self):
-        return self.news_title
+        return self.title
 
     class Meta:
         verbose_name = 'News slide'
         verbose_name_plural = 'News slides'
+
 

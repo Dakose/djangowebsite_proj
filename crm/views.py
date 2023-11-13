@@ -14,4 +14,3 @@ def thanks_page(request):
     else:
         return render(request, './thanks.html')
 
-
