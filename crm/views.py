@@ -2,6 +2,12 @@ from django.shortcuts import render
 from .forms import OrderForm
 from .models import Order
 
+def first_page(request):
+    form = OrderForm()
+    dict_obj = {
+        'form': form,
+    }
+    return render(request, './home.html', dict_obj)
 
 # Create your views here.
 def thanks_page(request):

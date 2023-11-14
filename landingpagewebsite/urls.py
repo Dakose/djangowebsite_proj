@@ -27,7 +27,7 @@ router.register(r'users', UserViewSet)
 router.register(r'groups', GroupViewSet)
 
 urlpatterns = [
-    path('main/', first_page, name='home'),
+    path('main/', views.first_page, name='home'),
     path('admin/', admin.site.urls),
     path('thanks/', thanks_page, name='thanks'),
     path('routers/', include(router.urls)),
