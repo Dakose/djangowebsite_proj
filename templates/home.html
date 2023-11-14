@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block index %}
+
     <main>
         <a rel="stylesheet" href="{% static './css/helper.css' %}"></a>
         <a rel="stylesheet" href="{% static './css/style.css' %}"></a>
@@ -337,7 +338,6 @@
         </section>
 
         <section id="contact" class="container my-8">
-            {% csrf_token %}
             <div class="row">
                 <div class="col-md-8 offset-md-2">
                     <div class="text-center">
@@ -345,20 +345,24 @@
                         <hr class="contact-hr">
                         <p class="section-text mb-6">Find out early about all upcoming promotions and new product
                             releases with our newsletter.</p>
-                        <div class="input-group subscribe">
-                            <div>
-                                <label for="inputEmail" class="user_name"></label>
-                                {{ form.name }}
+                        <form action="{% url 'thanks' %}" method="POST" style="width: 50%;">
+                            {% csrf_token %}
+                            <div class="input-group subscribe">
+                                <div>
+                                    <label for="inputEmail3" class="input-group-append">@Email</label>
+                                    {{ form.name }}
+                                    <div class=""></div>
+                                </div>
+                                <div>
+                                    <label for="inputPhone3" class="input-group-append">Phone</label>
+                                    {{ form.phone }}
+                                    <div class=""></div>
+                                </div>
+                                <div style="float: rig;" class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="submit" >SEND</button>
+                                </div>
+                            </form>
                             </div>
-                            <div>
-                                <label for="inputPhone" class="user_phone"></label>
-                                {{ form.phone }}
-                            </div>
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="submit" ></button>
-                            </div>
-                        </form>
-                        </div>
                     </div>
                 </div>
             </div>

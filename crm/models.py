@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class StatusCrm(models.Model):
-    StatusName = models.CharField(max_length=200, verbose_name='Status name')
+    StatusName = models.CharField(max_length=255, verbose_name='Status name')
 
     def __str__(self):
         return self.StatusName
@@ -13,8 +13,8 @@ class StatusCrm(models.Model):
 
 class Order(models.Model):
     order_dt = models.DateTimeField(auto_now=True)
-    order_name = models.CharField(max_length=200, verbose_name='Name:')
-    order_phone = models.CharField(max_length=200, verbose_name='Phone:')
+    order_name = models.CharField(max_length=255, verbose_name='Name:')
+    order_phone = models.CharField(max_length=255, verbose_name='Phone:')
     order_status = models.ForeignKey(StatusCrm, on_delete=models.PROTECT, null=True, blank=True, verbose_name='Status:')
 
     def __str__(self):

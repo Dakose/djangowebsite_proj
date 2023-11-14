@@ -4,8 +4,13 @@ from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
 from .serializer import UserSerializer, GroupSerializer
+
+
 def first_page(request):
     return render(request, './home.html')
+
+def thanks_page(request):
+    return render(request, './thanks.html')
 
 class UserViewSet(viewsets.ModelViewSet):
     """

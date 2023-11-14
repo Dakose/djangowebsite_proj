@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from .views import first_page, UserViewSet, GroupViewSet
+from crm import views
+from django.conf.urls.static import static
+from django.conf import settings
+from .views import first_page, thanks_page, UserViewSet, GroupViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
@@ -24,10 +27,10 @@ router.register(r'users', UserViewSet)
 router.register(r'groups', GroupViewSet)
 
 urlpatterns = [
-    path('', first_page),
+    path('main/', first_page, name='home'),
     path('admin/', admin.site.urls),
-    path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-
-]
+    path('thanks/', thanks_page, name='thanks'),
+    path('routers/', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
