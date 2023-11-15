@@ -13,10 +13,11 @@ def first_page(request):
 def thanks_page(request):
     if request.POST:
         name = request.POST['name']
+        email = request.POST['email']
         phone = request.POST['phone']
-        element = Order(order_name = name, order_phone = phone)
+        element = Order(order_name = email, order_phone = phone)
         element.save()
-        return render(request, './thanks.html', {'name': name, 'phone': phone})
+        return render(request, './thanks.html', {'name': name, 'email': email, 'phone': phone})
     else:
         return render(request, './thanks.html')
 

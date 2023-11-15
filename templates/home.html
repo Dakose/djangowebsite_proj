@@ -349,12 +349,17 @@
                             {% csrf_token %}
                             <div class="input-group subscribe">
                                 <div>
-                                    <label for="inputEmail3" class="input-group-append">@Email</label>
+                                    <label for="inputEmail3" class="name">Name</label>
                                     {{ form.name }}
                                     <div class=""></div>
                                 </div>
                                 <div>
-                                    <label for="inputPhone3" class="input-group-append">Phone</label>
+                                    <label for="inputPhone3" class="email">Email</label>
+                                    {{ form.email }}
+                                    <div class=""></div>
+                                </div>
+                                <div>
+                                    <label for="inputPhone3" class="phone">Phone</label>
                                     {{ form.phone }}
                                     <div class=""></div>
                                 </div>

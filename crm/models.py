@@ -14,6 +14,7 @@ class StatusCrm(models.Model):
 class Order(models.Model):
     order_dt = models.DateTimeField(auto_now=True)
     order_name = models.CharField(max_length=255, verbose_name='Name:')
+    order_email = models.CharField(max_length=255, null=True, verbose_name='Email:')    
     order_phone = models.CharField(max_length=255, verbose_name='Phone:')
     order_status = models.ForeignKey(StatusCrm, on_delete=models.PROTECT, null=True, blank=True, verbose_name='Status:')
 
