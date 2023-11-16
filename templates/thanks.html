@@ -5,14 +5,23 @@
 	<!-- thanks -->
   	<section>
 		{% if name  %}
-  		<div class="container">
-  			<CENTER style = 'margin-top: 35%; margin-bottom: 35%;'><h1>{{ name }}, Thanks for order!</h1></CENTER>
+  		<div class="section-title-1">
+  			<CENTER><h1>{{ name }}, Thanks for order!</h1>
+				<a href="{% url 'home' %}">
+					<button class="btn btn-outline-secondary" type="button">Back</button>
+				</a>
+			</CENTER>
   		</div>
 		{% else %}
-		<div class="container">
-  			<CENTER style = 'margin-top: 35%; margin-bottom: 35%;'><h1>Thanks!</h1></CENTER>
+		<div class="section-title-1">
+  			<CENTER><h1>Thanks!</h1>
+				<a href="{% url 'home' %}">
+					<button class="btn btn-outline-secondary" type="button">Back</button>
+				</a>
+			</CENTER>
   		</div>
 		{% endif %}
+		
   	</section>
   	<!-- thanks -->
 {% endblock %}

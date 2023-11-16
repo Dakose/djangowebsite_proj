@@ -29,7 +29,7 @@ router.register(r'groups', GroupViewSet)
 urlpatterns = [
     path('main/', views.first_page, name='home'),
     path('admin/', admin.site.urls),
-    path('thanks/', thanks_page, name='thanks'),
+    path('thanks/', views.thanks_page, name='thanks_page'),
     path('routers/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

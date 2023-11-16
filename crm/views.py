@@ -15,7 +15,7 @@ def thanks_page(request):
         name = request.POST['name']
         email = request.POST['email']
         phone = request.POST['phone']
-        element = Order(order_name = email, order_phone = phone)
+        element = Order(order_name = name, order_email = email, order_phone = phone)
         element.save()
         return render(request, './thanks.html', {'name': name, 'email': email, 'phone': phone})
     else:

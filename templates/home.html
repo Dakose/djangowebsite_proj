@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% csrf_token %}
 {% load static %}
 {% block index %}
 
@@ -345,26 +346,26 @@
                         <hr class="contact-hr">
                         <p class="section-text mb-6">Find out early about all upcoming promotions and new product
                             releases with our newsletter.</p>
-                        <form action="{% url 'thanks' %}" method="POST" style="width: 50%;">
-                            {% csrf_token %}
                             <div class="input-group subscribe">
+                                <form action="{% url 'thanks_page' %}" method="POST" style="width: 100%;">
+                                    {% csrf_token %}
                                 <div>
-                                    <label for="inputEmail3" class="name">Name</label>
+                                    <label for="inputEmail3" class="subscribe">Name</label><br>
                                     {{ form.name }}
                                     <div class=""></div>
                                 </div>
                                 <div>
-                                    <label for="inputPhone3" class="email">Email</label>
+                                    <label for="inputPhone3" class="subscribe">Email</label><br>
                                     {{ form.email }}
                                     <div class=""></div>
                                 </div>
                                 <div>
-                                    <label for="inputPhone3" class="phone">Phone</label>
+                                    <label for="inputPhone3" class="subscribe">Phone</label><br>
                                     {{ form.phone }}
                                     <div class=""></div>
                                 </div>
-                                <div style="float: rig;" class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="submit" >SEND</button>
+                                <div style="float: right;" class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="submit" >SEND ORDER</button>
                                 </div>
                             </form>
                             </div>
