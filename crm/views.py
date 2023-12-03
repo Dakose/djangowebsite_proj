@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from .forms import OrderForm
 from .models import Order
+from testimonials.models import TestimonialsSlider
 
 def first_page(request):
+    testimonials = TestimonialsSlider.objects.all()
     form = OrderForm()
     dict_obj = {
+        'testimonials': testimonials,
         'form': form,
     }
     return render(request, './home.html', dict_obj)
