@@ -12,9 +12,9 @@
             </div>
         </div>
     </div>
+    {% for testimonial in testimonials %}
     <div class="swiper testimoni">
         <div class="swiper-wrapper">
-            {% for testimonial in testimonials_list %}
             <div class="swiper-slide">
                 <div class="card card-testimoni">
                     <div class="card-body">
@@ -36,64 +36,7 @@
                     </div>
                 </div>
             </div>
-            {% endfor %}
-            <!-- <div class="swiper-slide">
-                <div class="card card-testimoni">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-2">
-                                <img class="img-testimoni" src="{% static './img/people-2.jpg' %}" alt="">
-                            </div>
-                            <div class="col-10 pl-4">
-                                <h6 class="card-title mb-1">Rekha Varadwaz <span class="text-small">/Manager at
-                                        Nike
-                                        inc</span></h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card card-testimoni">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-2">
-                                <img class="img-testimoni" src="{% static './img/people-1.jpg' %}" alt="">
-                            </div>
-                            <div class="col-10 pl-4">
-                                <h6 class="card-title mb-1">Louis Saville <span class="text-small">/CEO at
-                                        Google
-                                        inc</span></h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="card card-testimoni">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-2">
-                                <img class="img-testimoni" src="{% static './img/people-2.jpg' %}" alt="">
-                            </div>
-                            <div class="col-10 pl-4">
-                                <h6 class="card-title mb-1">Rekha Varadwaz <span class="text-small">/Manager at
-                                        Nike
-                                        inc</span></h6>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+            {% endfor %}           
 
 <section id="blog" class="container-fluid my-6 bg-grey py-5">
     <div class="container">
@@ -127,5 +70,5 @@
                 </p>
             </div>
         </div>
-    </div> -->
+    </div>
 </section>

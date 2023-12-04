@@ -9,7 +9,7 @@ def first_page(request):
     dict_obj = {
         'testimonials': testimonials,
         'form': form,
-    }
+        }
     return render(request, './home.html', dict_obj)
 
 # Create your views here.

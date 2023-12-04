@@ -16,6 +16,6 @@ class TestimonialsAdmin(admin.ModelAdmin):
         else:
             return 'None image'
         
-        get_image.short_description = 'minimize'
+    get_image.short_description = 'minimize'
 
 admin.site.register(TestimonialsSlider, TestimonialsAdmin)
