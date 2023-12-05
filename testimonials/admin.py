@@ -4,11 +4,11 @@ from .models import TestimonialsSlider
 
 # Register your models here.
 class TestimonialsAdmin(admin.ModelAdmin):
-    display = ('title', 'text', 'css', 'get_image')
-    links = ('title', )
-    editable = ('css', )
+    list_display = ('title', 'text', 'css', 'get_image')
+    list_display_links = ('title', )
+    list_editable = ('css', )
     fields = ('title', 'text', 'css', 'img', 'get_image')
-    readonly = ('get_image', )
+    readonly_fields = ('get_image', )
     
     def get_image(self, obj):
         if obj.img:
