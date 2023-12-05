@@ -1,10 +1,9 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
-from .models import NewsSlider
-
+from .models import ServiceSlider
 # Register your models here.
 
-class NewsAdmin(admin.ModelAdmin):
+class ServiceAdmin(admin.ModelAdmin):
     list_display = ('title', 'text', 'css', 'get_image')
     list_display_links = ('title', )
     list_editable = ('css', )
@@ -20,4 +19,4 @@ class NewsAdmin(admin.ModelAdmin):
     get_image.short_description = 'minimize'
 
 
-admin.site.register(NewsSlider, NewsAdmin)
+admin.site.register(ServiceSlider, ServiceAdmin)

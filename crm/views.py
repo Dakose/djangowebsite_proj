@@ -2,15 +2,21 @@ from django.shortcuts import render
 from .forms import OrderForm
 from .models import Order
 from testimonials.models import TestimonialsSlider
+from latestnews.models import NewsSlider
+from ourservice.models import ServiceSlider
 
 def first_page(request):
+    ourservice = ServiceSlider.objects.all()
     testimonials = TestimonialsSlider.objects.all()
+    latestnews = NewsSlider.objects.all()
     form = OrderForm()
     dict_obj = {
+        'ourservice': ourservice,
         'testimonials': testimonials,
+        'latestnews': latestnews,
         'form': form,
         }
-    return render(request, './home.html', dict_obj)
+    return render(request, './index.html', dict_obj)
 
 # Create your views here.
 def thanks_page(request):
