@@ -1,1 +1,23 @@
 {% load static %}
+<section id="blog" class="container-fluid my-6 bg-grey py-5">
+    <div class="container">
+        <div class="text-center">
+            <h6 class="section-sub">latest news</h6>
+            <h2 class="section-title-2 mb-7">From Our Blog</h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 mb-3">
+                <div class="outline-blog">
+                    <!-- <img class="img-blog" src="{% static './img/blog-1.jpg' %}" alt=""> -->
+                    <img class="img-blog" src="{{ latestnews.img.url }}" alt="">
+                </div>
+                <h5 class="blog-title">
+                    {{ latestnews.title }}
+                </h5>
+                <p class="blog-text">
+                    {{ latestnews.text }}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
