@@ -1,6 +1,7 @@
 {% load static %}
 <section id="blog" class="container-fluid my-6 bg-grey py-5">
     <div class="container">
+        {% for items in latestnews %}
         <div class="text-center">
             <h6 class="section-sub">latest news</h6>
             <h2 class="section-title-2 mb-7">From Our Blog</h2>
@@ -19,5 +20,6 @@
                 </p>
             </div>
         </div>
+        {% endfor %}
     </div>
 </section>
