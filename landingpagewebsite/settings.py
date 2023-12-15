@@ -40,6 +40,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # my_apps
+    'aboutus.apps.AboutusConfig',
     'ourservice.apps.OurserviceConfig',
     'testimonials.apps.TestimonialsConfig',
     'crm.apps.CrmConfig',

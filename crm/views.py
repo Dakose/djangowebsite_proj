@@ -4,14 +4,17 @@ from .models import Order
 from testimonials.models import TestimonialsSlider
 from latestnews.models import NewsSlider
 from ourservice.models import ServiceSlider
+from aboutus.models import AboutUs
 
 def first_page(request):
     ourservice = ServiceSlider.objects.all()
+    aboutus = AboutUs.objects.all()
     testimonials = TestimonialsSlider.objects.all()
     latestnews = NewsSlider.objects.all()
     form = OrderForm()
     dict_obj = {
         'ourservice': ourservice,
+        'aboutus': aboutus,
         'testimonials': testimonials,
         'latestnews': latestnews,
         'form': form,
