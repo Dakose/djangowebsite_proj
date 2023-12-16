@@ -11,7 +11,7 @@
             <i class="fa fa-chevron-right"></i>
         </div>
     </div>
-    {% for items in ourservice %}
+    {% for item in ourservice %}
     <div class="swiper service">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -20,11 +20,11 @@
                         <div class="row">
                             
                             <div class="col-2">
-                                <img class="card-icon" src="{{ ourservice.img.url }}" alt="">
+                                <img class="card-icon" src="{{ item.img.url }}" alt="">
                             </div>
                             <div class="col-10">
-                                <h6 class="card-title mb-1">{{ ourservice.title }}</h6>
-                                <p class="card-text">{{ ourservice.text }}</p>
+                                <h6 class="card-title mb-1">{{ item.title }}</h6>
+                                <p class="card-text">{{ item.text }}</p>
                             </div>
                         </div>
                     </div>

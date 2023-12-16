@@ -1,7 +1,7 @@
 {% load static %}
 <section id="blog" class="container-fluid my-6 bg-grey py-5">
     <div class="container">
-        {% for items in latestnews %}
+        {% for item in latestnews %}
         <div class="text-center">
             <h6 class="section-sub">latest news</h6>
             <h2 class="section-title-2 mb-7">From Our Blog</h2>
@@ -10,13 +10,13 @@
             <div class="col-sm-12 col-md-6 mb-3">
                 <div class="outline-blog">
                     <!-- <img class="img-blog" src="{% static './img/blog-1.jpg' %}" alt=""> -->
-                    <img class="img-blog" src="{{ latestnews.img.url }}" alt="">
+                    <img class="img-blog" src="{{ item.img.url }}" alt="">
                 </div>
                 <h5 class="blog-title">
-                    {{ latestnews.title }}
+                    {{ item.title }}
                 </h5>
                 <p class="blog-text">
-                    {{ latestnews.text }}
+                    {{ item.text }}
                 </p>
             </div>
         </div>

@@ -12,7 +12,7 @@
             </div>
         </div>
     </div>
-    {% for items in testimonials %}
+    {% for item in testimonials %}
     <div class="swiper testimoni">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -21,14 +21,14 @@
                         <div class="row">
                             <div class="col-2">
                                 <!-- <img class="img-testimoni" src="{% static './img/people-1.jpg' %}" alt=""> -->
-                                <img class="img-testimoni" src="{{ testimonials.img.url }}" alt="">
+                                <img class="img-testimoni" src="{{ item.img.url }}" alt="">
                             </div>
                             <div class="col-10 pl-4">
                                 <!-- <h6 class="card-title mb-1">Louis Saville <span class="text-small">/CEO at
                                         Google
                                         inc</span></h6> -->
-                                        <h6 class="card-title mb-1">{{ testimonials.title }}</h6>        
-                                <p class="card-text">{{ testimonials.text }}</p>
+                                        <h6 class="card-title mb-1">{{ item.title }}</h6>        
+                                <p class="card-text">{{ item.text }}</p>
                             </div>
                         </div>
                     </div>
