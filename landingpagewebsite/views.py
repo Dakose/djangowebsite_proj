@@ -1,9 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth.models import User, Group
+from crm.models import Order
 from rest_framework import viewsets
 from rest_framework import permissions
-from .serializer import UserSerializer, GroupSerializer
+from .serializer import UserSerializer, GroupSerializer, OrderSerializer
 
 
 def first_page(request):
@@ -27,4 +28,12 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+class OrderViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
     permission_classes = [permissions.IsAuthenticated]

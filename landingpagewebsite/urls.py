@@ -19,12 +19,14 @@ from django.urls import include, path
 from crm import views
 from django.conf.urls.static import static
 from django.conf import settings
-from .views import first_page, thanks_page, UserViewSet, GroupViewSet
+from .views import first_page, thanks_page, UserViewSet, GroupViewSet, OrderViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'groups', GroupViewSet)
+router.register(r'orders', OrderViewSet)
+
 
 urlpatterns = [
     path('', views.first_page, name='home'),
